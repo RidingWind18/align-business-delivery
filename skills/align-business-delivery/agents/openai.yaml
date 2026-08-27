@@ -1,0 +1,4 @@
+interface:
+  display_name: "Business Delivery Alignment"
+  short_description: "Align requirements, prototypes, code, and delivery"
+  default_prompt: "Use $align-business-delivery to advance this business feature from the current project baseline."
