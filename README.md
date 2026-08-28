@@ -8,6 +8,7 @@
 - 长线程中断或派生后，AI 丢失当前任务边界和最新纠偏。
 - 多个模块、客户端或仓库并行开发时，前置依赖和完成状态混淆。
 - 代码、编译、运行服务和页面验收被错误地当成同一层完成证据。
+- 新项目没有文档，或旧项目文档失修，使用者不知道应维护哪些最小有效材料。
 
 ## 它不替代什么
 
@@ -16,7 +17,7 @@
 ## 快速安装
 
 ```powershell
-git clone --branch v0.2.1-rc.2 https://github.com/RidingWind18/align-business-delivery.git
+git clone --branch v0.3.0-rc.1 https://github.com/RidingWind18/align-business-delivery.git
 $codexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { "$env:USERPROFILE\.codex" }
 Copy-Item -Recurse -Force `
   .\align-business-delivery\skills\align-business-delivery `
@@ -40,13 +41,14 @@ $align-business-delivery
 ## 文档
 
 - `skills/align-business-delivery/`：可安装 Skill。
+- [`docs/zh-CN/使用与方法说明.md`](docs/zh-CN/使用与方法说明.md)：中文使用场景、能力边界和文档基线诊断说明。
 - `CHANGELOG.md`：版本变化。
 - `SOURCE.md`：公开仓库与私有演进源的关系。
 - `CONTRIBUTING.md`：问题反馈和贡献边界。
 
 ## 版本
 
-公开仓库使用语义化版本和 GitHub Release。当前候选版本为 `v0.2.1-rc.2`，稳定发布基线拟为 `v0.2.1`。安装时建议固定到 tag，不要直接跟随 `main`。
+公开仓库使用语义化版本和 GitHub Release。当前候选版本为 `v0.3.0-rc.1`。安装时建议固定到 tag，不要直接跟随 `main`。
 
 ## License
 

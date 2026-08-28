@@ -1,6 +1,6 @@
 # Document And Artifact Lifecycle
 
-Use this reference when current business evidence must be consumed, a document may be stale, or an artifact's consumer, execution context, release state, cleanup, or old/new-version effect is unclear. It is a delivery-baseline and artifact-lifecycle guard, not generic document management.
+Use this reference when current business evidence must be consumed, a document may be stale, or an artifact's consumer, execution context, release state, cleanup, or old/new-version effect is unclear. It is a delivery-baseline and artifact-lifecycle guard, not generic document management. When the project lacks a usable documentation system or the user asks what documents should exist, use `documentation-baseline-diagnosis.md` first.
 
 ## Consumption Proof
 
@@ -55,4 +55,4 @@ Do not merge these classes merely to reduce file count. An unreleased, unconsume
 
 ## Boundary
 
-This reference proves consumption and classifies lifecycle. `source-arbitration-and-baseline.md` decides source conflicts and authorization facts; it does not classify asset lifecycle. Execution scope determines whether a discovery changes the current task. Do not trigger a full lifecycle review for an ordinary update whose consumer and lifecycle are already clear.
+This reference proves consumption and classifies lifecycle after relevant artifacts exist. `documentation-baseline-diagnosis.md` recommends or repairs the minimum documentation topology. `source-arbitration-and-baseline.md` decides source conflicts and authorization facts; it does not classify asset lifecycle. Execution scope determines whether a discovery changes the current task. Do not trigger a full lifecycle review or documentation diagnosis for an ordinary update whose consumer and lifecycle are already clear.

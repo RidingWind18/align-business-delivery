@@ -1,6 +1,6 @@
 ---
 name: align-business-delivery
-description: Use when existing business-system or complex business work needs a reviewable baseline from vague requirements, or when continuous feedback, complex correction, an interrupted long-running delivery, or commit-batch confusion creates material drift risk among PRDs, prototypes, implementation, business contracts, state models, task boundaries, clients, modules, or repositories.
+description: Use when existing business-system or complex business work needs a reviewable baseline from vague requirements; when project documentation is missing, stale, duplicated, or unclear; or when continuous feedback, complex correction, interruption, or commit-batch confusion creates material drift among PRDs, prototypes, implementation, contracts, state models, task boundaries, clients, modules, or repositories.
 ---
 
 # Align Business Delivery
@@ -39,6 +39,7 @@ This is a fact-based router, not a stage plan or a visible checklist. Do not out
 
 - **Vague input**: capture the requested start mode. For organize-only, initial business draft, or reviewable PRD-baseline requests, form one complete reviewable business baseline here without requiring specialist exploration. For explicit option exploration, comparison, formal product design, or prototyping, freeze the verified inputs and hand the formal artifact to the appropriate specialist capability; do not create a parallel formal artifact.
 - **Existing baseline**: inspect current documents, code, database, prototypes, history, and conventions; arbitrate only the dimensions that conflict.
+- **Documentation baseline diagnosis**: when the user asks what documentation to maintain, or missing or stale documentation prevents a reliable baseline, inspect the project and recommend the minimum role-based document topology; create or repair it only when authorized.
 - **Affected module refinement**: refine only the current module or affected page, data flow, state behavior, and prototype investment.
 - **Development-batch freeze**: record the effective scope, contracts, dependencies, ownership, acceptance, and unresolved blockers, then hand planning or implementation to the appropriate specialist capability.
 - **Execution drift return**: re-enter only when feedback, interruption, source conflict, ownership conflict, dependency invalidation, or scope discovery changes the frozen package. Return only the affected module to its earliest unresolved route.
@@ -48,6 +49,8 @@ This is a fact-based router, not a stage plan or a visible checklist. Do not out
 Lightweight means low-interference routing and concise output, not shallow business analysis.
 
 Before forming a complete draft baseline from incomplete input, organizing raw items under a no-expansion request, handling a mixed-intent message or current feedback batch, or confirming modules/items step by step, read `references/requirement-intake-and-convergence.md`. Keep the document body readable and preserve the requested start mode and pace. Internally preserve confirmed facts, code facts, AI inferences, recommendations, pending decisions, and out-of-scope items. Present them as a compact matter table or list unless the user requests a formal audit, full evidence, or separately expanded categories; combine empty categories into one short note rather than six mechanical headings. Use inline labels only where ambiguity could change later design.
+
+When the user asks how a new, inherited, undocumented, or stale-document project should be documented, or when no reliable documentation baseline can be established, read `references/documentation-baseline-diagnosis.md`. Treat the user's existing documentation system and proposed topology as constraints, recommend only compatible minimum changes from actual consumers and risks, and do not copy a fixed document family or create, rename, move, split, merge, archive, or replace files until that work is requested or authorized.
 
 During execution, when an adjacent data, document, contract, or module issue is discovered, read `references/execution-scope-guard.md` and classify it as required adjacent closure, blocking conflict, out-of-scope discovery, or later optimization before changing it. Discovery and deeper analysis do not authorize implementation outside the frozen package.
 
@@ -73,6 +76,7 @@ Read only the target references required by the current stage and risk:
 - `references/source-arbitration-and-baseline.md`: checkable facts, conflict among user decisions, PRDs, prototypes, code, database, history, conventions, current batch, or irreversible-action authorization.
 - `references/prototype-and-product-flow.md`: prototype investment, real-page and component reuse, page interaction, data flow, state expression, or prototype-to-implementation tracking.
 - `references/document-and-artifact-lifecycle.md`: document consumption, project-class governance, current versus historical material, consumers, version ownership, or initialization/migration/verification/deployment asset boundaries.
+- `references/documentation-baseline-diagnosis.md`: missing, stale, duplicated, contradictory, or unclear project documentation; documentation-system recommendation; authority index; minimum useful document topology; or authorized baseline creation and repair.
 - `references/business-model-state-and-refactor.md`: core objects, relationships, state, time, ownership, workflow paradox, minimal traceability, old/new chains, compatibility, migration, rollback, or semantic preservation.
 - `references/module-delivery-and-coordination.md`: module package, readiness, complete business states, topology or dependency ledger, invalidation, cross-owner contract, multi-unit delivery, status conflict, completion level, or downstream release.
 - `references/execution-scope-guard.md`: mode escalation, writable-root and delegation boundary, interruption recovery, pause-for-analysis, delivery-batch separation, review findings, lightweight display/validation/submission closure, current change package, discovery classification, adjacent closure, local reopen, unauthorized scope, or risky-action continuation.
