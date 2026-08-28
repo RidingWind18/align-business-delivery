@@ -17,7 +17,7 @@
 ## 快速安装
 
 ```powershell
-git clone --branch v0.3.0-rc.1 https://github.com/RidingWind18/align-business-delivery.git
+git clone --branch v0.3.0-rc.2 https://github.com/RidingWind18/align-business-delivery.git
 $codexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { "$env:USERPROFILE\.codex" }
 Copy-Item -Recurse -Force `
   .\align-business-delivery\skills\align-business-delivery `
@@ -48,7 +48,7 @@ $align-business-delivery
 
 ## 版本
 
-公开仓库使用语义化版本和 GitHub Release。当前候选版本为 `v0.3.0-rc.1`。安装时建议固定到 tag，不要直接跟随 `main`。
+公开仓库使用语义化版本和 GitHub Release。当前候选版本为 `v0.3.0-rc.2`。安装时建议固定到 tag，不要直接跟随 `main`。
 
 ## License
 
