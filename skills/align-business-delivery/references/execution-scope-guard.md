@@ -81,6 +81,8 @@ If any condition fails, do not add it opportunistically. Record it under the app
 
 Reopen the smallest affected package when verified facts invalidate its assumed display rule, validation, submission behavior, local contract, or acceptance condition. Reassess the changed boundary and its direct dependent condition; do not turn a local correction into a broad audit without an escalation trigger.
 
+If the same user-visible acceptance symptom remains after two repair attempts or completion claims, stop adding local patches. Downgrade the earlier completion conclusion to unverified, restore the reproducible path, runtime and version facts, prior attempts, and available evidence, then hand root-cause analysis to an applicable specialist debugging capability. If none is available, use ordinary systematic diagnosis. This gate controls re-entry and evidence status; it does not prescribe debugging steps, replace that capability, or expand the authorized scope.
+
 ## Shared Consumer Check
 
 Trigger this check only when changing a mapper, result mapping, value object, shared component, hook, query, or base method with multiple consumers. Internally identify the target consumer and the most likely affected non-target consumers, keep the change inside the target query or behavior where possible, validate the target entry, and check one existing entry most likely to regress but expected to remain unchanged. Do not default to a visible consumer inventory or a project-wide scan.

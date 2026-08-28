@@ -20,6 +20,15 @@ The user's existing documentation system, naming, maintenance preferences, and p
 
 ## Diagnose Before Recommending
 
+Establish the evidence surface before inventorying documents. A project's current local workspace, committed baseline, and collaborator- or release-visible baseline answer different questions and must not silently substitute for one another:
+
+- when the user asks what is currently maintained locally, include relevant uncommitted and untracked material in the inspection;
+- when the user asks what another worker can obtain, inspect the committed or otherwise shared baseline;
+- when the user asks about a public or released baseline, inspect the actual published projection, tag, package, or deployment source;
+- when these surfaces differ, report the divergence directly, such as "maintained locally but not shared," instead of describing the material as wholly absent or already available to collaborators.
+
+For version-controlled projects, an isolated clean worktree represents its starting commit, not automatically the user's full current workspace. State that limitation or compare it with the active working tree when the question requires current local facts. A local commit or `HEAD` is not automatically collaborator-visible: verify its relationship to the relevant upstream, remote branch, package, or published source before calling it cloneable or shared. If that relationship is not checked, label the conclusion as the local committed baseline and name shared reachability as unverified. For non-Git projects, apply the same distinction to local, shared, and deployed evidence. Do not automatically commit, publish, or copy local-only material merely because the diagnosis found a reachability gap.
+
 Inspect the reachable project facts needed to answer:
 
 ```text
@@ -82,6 +91,18 @@ Authority and maintenance:
 ```
 
 Use the user's chosen documentation model and the project's existing naming and directory conventions. A numbered document family is appropriate only when it improves stable navigation and agrees with that basis; do not copy another project's numbering or taxonomy.
+
+## Default Output And Detail Escalation
+
+The diagnosis may require broad inspection, but the default user-facing result is a compact decision summary. Use this order unless the user requests a full audit:
+
+1. overall conclusion;
+2. current document roles and only material anomalies;
+3. minimum compatible recommendations;
+4. documents or categories not recommended;
+5. one next action and any unverified boundary.
+
+Do not paste the complete file inventory, command output, every link check, or a file-by-file evidence diary into the default response. Include the evidence path or consumer only for a conclusion that affects the decision. Summarize repeated healthy findings instead of listing them individually. A mature existing system with no material gap should be reported as such rather than receiving a new document plan. Expand into a detailed evidence table only when the user asks for a full audit, evidence details, competition material, or a high-risk authority conflict requires it. Concise output does not reduce the required inspection depth or permit static inspection to be presented as complete validation.
 
 ## Creation And Repair
 
