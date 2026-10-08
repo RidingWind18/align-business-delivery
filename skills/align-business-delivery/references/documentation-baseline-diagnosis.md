@@ -9,10 +9,10 @@ Use this diagnosis when at least one condition is true:
 - the user asks what documents the project should maintain or asks to create or repair them;
 - a new project has no reliable entry, current decisions, or implementation basis;
 - an inherited project has documents, but their authority, freshness, consumers, or relationship to current code is unclear;
-- several repositories, clients, owners, or modules need shared business or delivery boundaries;
+- several repositories, clients, owners, or modules lack a clear or reachable shared business or delivery boundary;
 - implementation cannot safely continue because no reachable current baseline can be identified.
 
-Do not trigger it for an ordinary local fix whose current behavior, ownership, and validation path are already clear. Do not create documents merely because a possible category is absent.
+Do not trigger it for an ordinary local fix whose current behavior, ownership, and validation path are already clear, or merely because work spans multiple repositories. Do not create documents merely because a possible category is absent.
 
 This skill may diagnose and recommend the minimum documentation system. Create or reorganize files only when the user requests or authorizes that work and the writable roots are established. Do not silently replace product design, architecture design, project management, or a specialist documentation method.
 

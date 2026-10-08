@@ -57,9 +57,17 @@ Internally normalize a mixed message into:
 
 Execute only the current authorized request. A question, suggestion, or future possibility does not become a deliverable merely because it appears beside an imperative.
 
+### Follow-Up Inheritance
+
+For a supplement, short correction, quoted reply, or "continue," first locate the active parent request and its latest effective correction. Default to changing only the named item; keep the parent's goal, delivery batch, exclusions, and unaffected decisions. Start a new task only when the user explicitly switches the target or the existing parent cannot reasonably contain the request. If several active parents genuinely fit, ask only which one is meant.
+
+Classify the follow-up by effect: answer a question, correct a fact, add or replace a constraint, authorize an action, or change the task target. A question about a proposed implementation does not by itself authorize that implementation. A correction supersedes the conflicting conclusion, not the entire task. State the changed point and preserved boundary briefly when needed; do not make the user restate the whole assignment or reopen a settled design merely to continue.
+
+If the user corrects the same task interpretation twice, stop generating another plan or speculative cause list. Re-read the parent request, the two corrections, and the checkable current artifact or source; resolve the exact mismatch before further execution. Keep this recovery internal unless the remaining choice truly belongs to the user.
+
 ### Current Feedback Batch
 
-Treat the user's latest turn, referenced passage, or explicitly named recent turns as the current feedback batch. Prefer the business object identified by the quotation or annotation; do not pull unrelated historical issues into the batch.
+Treat the user's latest turn, referenced passage, or explicitly named recent turns as feedback on the affected items of the active parent task. It does not replace the whole task or erase other active items unless the user says so. Prefer the business object identified by the quotation or annotation; do not pull unrelated historical issues into the batch.
 
 First identify what each quotation or annotation is doing: it may name the current business object, define the current problem scope, mark a historical execution cutoff, dispute an old conclusion, supply evidence, or locate the parent request. Do not assume the quoted text is the whole current scope. Ordinary feedback about a current object should be handled directly; it does not require mechanically reopening the entire history.
 

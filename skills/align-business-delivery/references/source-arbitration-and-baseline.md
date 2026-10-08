@@ -30,6 +30,10 @@ Uncertain:
 
 Keep this record concise or internal during routine work. If evidence is unavailable, name the missing source instead of replacing inspection with “probably,” “maybe,” or a list of plausible causes. A prototype marker may establish a visible page rule, but it cannot by itself create a backend validation, state, ownership, or data rule.
 
+When repairing a migrated or copied feature, inspect the reachable source implementation and the target call path before inventing a new contract. Passing tests for a newly invented path does not prove that it matches the existing source contract.
+
+For a review concern based on an unusual sequence or concurrency, trace the supported actor, page or API entry, necessary state, and existing guard before asking for a new business rule. Distinguish a normal operation from a technically constructible request; the latter may justify checking defensive code, but does not itself justify redesign or a user decision. If the sequence is not supported by the actual workflow, or existing protection already contains its effect, close the concern briefly. Escalate only a reachable, unhandled consequence that affects the authorized acceptance condition; ask the user only when resolving it requires a genuine business choice.
+
 ## Baseline Record
 
 For standard-module or full-design work, record the applicable parts of:

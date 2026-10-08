@@ -1,6 +1,6 @@
 ---
 name: align-business-delivery
-description: Use when existing business-system or complex business work needs a reviewable baseline from vague requirements; when project documentation is missing, stale, duplicated, or unclear; or when continuous feedback, complex correction, interruption, or commit-batch confusion creates material drift among PRDs, prototypes, implementation, contracts, state models, task boundaries, clients, modules, or repositories.
+description: Use when an existing or complex business-system task needs a reviewable requirement or documentation baseline, or conflicting feedback, prototypes, code, contracts, or handoffs cause scope drift.
 ---
 
 # Align Business Delivery
@@ -8,6 +8,8 @@ description: Use when existing business-system or complex business work needs a 
 Use the lightest safe process to turn incomplete business input and current-system facts into a traceable, executable, and verifiable delivery baseline. Keep requirements, product flow, business contracts, implementation, and validation aligned without requiring the user to write a large process prompt.
 
 This skill is for existing business systems and complex business features. It is not a replacement for generic planning, implementation, TDD, debugging, testing, code review, worker scheduling, branch management, or project management.
+
+The user's explicit task and latest corrections take precedence over this skill's default workflow. Apply only relevant guidance; do not add work or require renewed approval solely to satisfy that workflow.
 
 ## Operating Principles
 
@@ -19,8 +21,9 @@ This skill is for existing business systems and complex business features. It is
 - Read access, deeper inspection, and similarity to another project do not grant write access. Establish the writable roots and protected user changes before editing or delegating execution.
 - Preserve project conventions and verified standard modules over generic preference.
 - Ask only questions that block the current decision. Continue safe, non-blocking work internally.
+- In review, check the supported actor and entry, necessary state, and existing protection before escalating an unusual scenario. A technically constructible request alone is not a new business decision.
 - Separate the current execution request from conceptual questions, candidate ideas, pending decisions, later-stage work, and explicit exclusions. Discussion is not implementation authorization.
-- Keep the current feedback batch authoritative for active item membership and lifecycle status across turns; arbitrate each item's substance by source dimension. Do not reopen resolved or superseded items without new regression evidence.
+- Apply follow-up feedback to the affected items of the active parent task. Preserve unchanged goals, exclusions, confirmed decisions, and other active items unless the user switches tasks. Do not reopen resolved or superseded items without new regression evidence.
 - Keep routine output concise: current conclusion, blocking decision, next action, evidence, and residual risk.
 
 ## Choose The Lightest Mode
@@ -48,21 +51,9 @@ This is a fact-based router, not a stage plan or a visible checklist. Do not out
 
 Lightweight means low-interference routing and concise output, not shallow business analysis.
 
-Before forming a complete draft baseline from incomplete input, organizing raw items under a no-expansion request, handling a mixed-intent message or current feedback batch, or confirming modules/items step by step, read `references/requirement-intake-and-convergence.md`. Keep the document body readable and preserve the requested start mode and pace. Internally preserve confirmed facts, code facts, AI inferences, recommendations, pending decisions, and out-of-scope items. Present them as a compact matter table or list unless the user requests a formal audit, full evidence, or separately expanded categories; combine empty categories into one short note rather than six mechanical headings. Use inline labels only where ambiguity could change later design.
-
-When the user asks how a new, inherited, undocumented, or stale-document project should be documented, or when no reliable documentation baseline can be established, read `references/documentation-baseline-diagnosis.md`. Treat the user's existing documentation system and proposed topology as constraints, recommend only compatible minimum changes from actual consumers and risks, and do not copy a fixed document family or create, rename, move, split, merge, archive, or replace files until that work is requested or authorized.
-
-During execution, when an adjacent data, document, contract, or module issue is discovered, read `references/execution-scope-guard.md` and classify it as required adjacent closure, blocking conflict, out-of-scope discovery, or later optimization before changing it. Discovery and deeper analysis do not authorize implementation outside the frozen package.
-
-Before resuming writes after context compression, a material or cross-day interruption, a task or batch switch, unclear active scope or commit membership, or explicit feedback that work is confused, incomplete, or drifting, read `references/requirement-intake-and-convergence.md` and `references/execution-scope-guard.md`. Restore only the minimum internal execution snapshot needed for the active batch. A continuous "continue" with clear scope proceeds directly. If the user says to stop, analyze, or clarify first, perform read-only inspection only; do not modify, stage, commit, push, or resume an older plan until the current batch is confirmed.
-
-When the user supplies a concrete prototype, page description, or interaction material for implementation or review, read `references/prototype-and-product-flow.md` before changing the page. Consume the supplied entry, retained and changed regions, fields and row actions, local workspaces, key operations, data/API mapping, and explicitly unchanged behavior. Do not claim that concrete interaction is missing when the supplied material states it, and do not turn mandatory consumption into a full-page rewrite.
-
-When changing a shared mapper, result mapping, value object, component, hook, query, or base method with multiple consumers, read `references/execution-scope-guard.md` and perform a risk-triggered consumer check. Do not apply this gate to an independent page, private method, or single-consumer query.
-
 ## Mandatory Gates
 
-Before any file or asset write, or before delegating an execution unit that may write, read `references/execution-scope-guard.md` and establish the allowed write roots, owned asset classes, read-only references, prohibited repositories or modules, and pre-existing user changes. Pass the same boundary to the receiver and check each write target against it. Multiple projects in one workspace are not one writable scope.
+At the start of a write-capable task package or delegation, read `references/execution-scope-guard.md` and establish the allowed write roots, owned asset classes, read-only references, prohibited repositories or modules, and pre-existing user changes. Revisit the boundary when scope or ownership changes; check each write target against the established boundary. Multiple projects in one workspace are not one writable scope.
 
 Before producing or applying an irreversible or difficult-to-recover action, read `references/source-arbitration-and-baseline.md` to verify the exact goal, object, environment, mechanism, and destructive details. Then read `references/execution-scope-guard.md` for the pause/continue decision. If authorization is incomplete, do not place the unconfirmed object or action in an executable or optional cleanup artifact; a disabled-by-default switch, comment, preview, guard, or "optional" label does not supply authorization. Pause only the risky part and continue safe current-scope delivery. If authorization is complete and current facts agree, proceed without asking for the same confirmation again.
 
@@ -70,16 +61,16 @@ Before starting a dependent module when task status, code, commits, validation, 
 
 ## Reference Routing
 
-Read only the target references required by the current stage and risk:
+Use this list as the single ordinary reference router. Read only the target references required by the current facts and risk. Reuse a reference already consumed in the current session while its governing basis and risk remain unchanged; do not reload it solely because another route mentions it.
 
-- `references/requirement-intake-and-convergence.md`: vague requirements, complete draft baseline, organize-only or stepwise intake, mixed intent, current feedback batches, quoted or annotated history, parent-request recovery, or fact/inference/recommendation separation.
+- `references/requirement-intake-and-convergence.md`: vague requirements, complete draft baseline, organize-only or stepwise intake, mixed intent, current feedback batches, quoted or annotated history, parent-request recovery, interruption recovery, or fact/inference/recommendation separation.
 - `references/source-arbitration-and-baseline.md`: checkable facts, conflict among user decisions, PRDs, prototypes, code, database, history, conventions, current batch, or irreversible-action authorization.
 - `references/prototype-and-product-flow.md`: prototype investment, real-page and component reuse, page interaction, data flow, state expression, or prototype-to-implementation tracking.
 - `references/document-and-artifact-lifecycle.md`: document consumption, project-class governance, current versus historical material, consumers, version ownership, or initialization/migration/verification/deployment asset boundaries.
 - `references/documentation-baseline-diagnosis.md`: missing, stale, duplicated, contradictory, or unclear project documentation; documentation-system recommendation; authority index; minimum useful document topology; or authorized baseline creation and repair.
 - `references/business-model-state-and-refactor.md`: core objects, relationships, state, time, ownership, workflow paradox, minimal traceability, old/new chains, compatibility, migration, rollback, or semantic preservation.
 - `references/module-delivery-and-coordination.md`: module package, readiness, complete business states, topology or dependency ledger, invalidation, cross-owner contract, multi-unit delivery, status conflict, completion level, or downstream release.
-- `references/execution-scope-guard.md`: mode escalation, writable-root and delegation boundary, interruption recovery, pause-for-analysis, delivery-batch separation, review findings, lightweight display/validation/submission closure, current change package, discovery classification, adjacent closure, local reopen, unauthorized scope, or risky-action continuation.
+- `references/execution-scope-guard.md`: mode escalation, writable-root and delegation boundary, interruption recovery, pause-for-analysis, delivery-batch separation, review findings, shared-consumer risk, lightweight display/validation/submission closure, current change package, discovery classification, adjacent closure, local reopen, unauthorized scope, or risky-action continuation.
 - `references/delivery-convergence-and-evidence.md`: midpoint convergence, delivery consistency, actual capability boundary, evidence level, truthful completion, unverified item, or residual risk.
 
 ## Capability Handoff
@@ -96,4 +87,4 @@ Read only the target references required by the current stage and risk:
 
 ## Completion
 
-At a delivery claim, commit or push, formal handoff, large-batch end, or requested omission/scope review, read `references/delivery-convergence-and-evidence.md` and compare requested scope, actual changes, excluded work, and evidence. Use a quick internal comparison for simple work and an explicit package comparison only for complex multi-module or cross-repository delivery.
+At a formal handoff, large-batch end, complex or cross-repository delivery claim, evidence conflict, or requested omission/scope review, read `references/delivery-convergence-and-evidence.md`. For a simple fast-closure claim, directly compare the request, actual change, exclusions, and evidence; load that reference only if the comparison exposes uncertainty or broader risk.

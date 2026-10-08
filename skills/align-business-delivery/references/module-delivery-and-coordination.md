@@ -6,7 +6,7 @@ Use this reference when several modules, owners, clients, or repositories share 
 
 For each affected module, keep a compact package containing its goal, current basis, implementation nature, page change, prototype investment, confirmed decisions, open design blockers, prerequisites, shared contracts, parallel safety, owner, deliverables, acceptance evidence, and upstream-change risk.
 
-Use the following business states:
+Use the project's existing status vocabulary when it preserves the following business distinctions. Map local labels to these meanings internally; do not rename a sound project state system merely to match these examples. If a required distinction is absent or disguised, propose the smallest clarification:
 
 - `DRAFT`: the module boundary or main decisions are still being formed.
 - `BLOCKED`: a prerequisite, frozen contract, or required decision is missing.
@@ -32,7 +32,11 @@ An output from a specialist, tool, or independent worker is input for review, no
 
 Before handing a package to another module or execution unit, preserve the source status of each consequential rule: user-confirmed decision, verified current-system fact, verified technical derivation, recommendation or candidate, or pending decision. A recommendation must not become an implementation requirement merely because it makes the package easier to execute. When the user has confirmed an observable result and the internal mechanism can be determined from reachable code, samples, history, or data, inspect that evidence and record the verified technical conclusion; until then, keep the mechanism as a candidate rather than asking the user to approve an internal algorithm or presenting it as a business rule.
 
-Include a compact current-baseline identifier and ensure the receiver can actually read the authoritative basis needed for the assigned work. A local-only, untracked, inaccessible, or merely mentioned artifact is not a reachable basis. Provide an authorized readable source or keep the affected decision blocked; do not compensate by flattening uncertain content into a definitive handoff rule.
+For a commit, branch, or cross-device handoff request, distinguish three memberships before listing work: already committed historical changes, current uncommitted implementation, and discussed but unfinished follow-up. The first is context, not a new commit; the second is eligible only within the authorized batch and ownership; the third may belong in a reachable handoff record without being described as implemented. A label such as "shared" or "public function" describes business reuse, not when a change was made or whether it is currently uncommitted. Verify the relevant repository and branch set from the current task and worktrees before claiming a complete handoff.
+
+Include a compact current-baseline identifier and ensure the receiver can actually read the authoritative basis needed for the assigned work. Judge reachability from the receiver's real environment and authorization: an untracked or local-only artifact may be a valid read-only basis when the receiver can access that exact source, while a committed or mentioned artifact is not reachable when the receiver cannot obtain it. Git status alone neither proves reachability nor authorizes publishing. Provide an authorized readable source or keep only the affected decision blocked; do not compensate by flattening uncertain content into a definitive handoff rule.
+
+Close handoff facts, durable status, and any temporary-material retirement into a version the receiver can actually obtain before declaring the handoff shared. A local commit, local cleanup, or attempted push is not a shared baseline until the intended receiver source is verified; retain the truthful local state and blocker when sharing fails.
 
 When an upstream correction replaces a handoff rule, mark the superseded package or affected rule `OBSOLETE`, pause only the dependent work, preserve unrelated valid increments, and require the receiver to consume the reachable replacement baseline before continuing. Do not roll back whole files or discard unaffected work merely because one handoff rule changed.
 
