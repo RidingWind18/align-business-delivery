@@ -22,7 +22,7 @@ Other local progress labels may exist, but they must not disguise the effective 
 
 ## Readiness And Minimal Contracts
 
-A module is `READY` only when its business goal, current carrying path, main rules, object ownership, shared boundary, deliverables, and acceptance criteria are clear enough that no open issue can change its main design.
+Assess `READY` for the current declared delivery package, not every future function of its parent module. Its goal, current carrying path, main rules, object ownership, shared boundary, deliverables, and acceptance criteria must be clear enough that no open issue can change that package's main design. Unrelated later decisions need not block an independent package. Do not redefine a blocked package as independent work to bypass its prerequisites or required acceptance.
 
 Freeze only the minimum boundary needed across owners: shared business operations, authoritative data, shared states, direction of use, compatibility expectations, and required idempotency or transaction semantics. Do not use a shared contract to prescribe another owner's internal routes, transport shapes, classes, local errors, or implementation details unless those are themselves the cross-owner boundary.
 

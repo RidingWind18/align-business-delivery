@@ -2,19 +2,37 @@
 
 Use this reference to keep an execution package within its authorized business boundary, especially for lightweight changes, newly discovered adjacent work, and high-risk actions. It is tool-neutral and does not replace debugging, testing, code review, or generic delivery workflows.
 
-## Three Risk Modes
+## Required Write Boundary
 
-| Mode | Use when | Execution boundary |
-| --- | --- | --- |
-| Fast closure | A local display, wording, validation, visibility, or one-point defect has no state or shared-contract change | Inspect the existing path, make the smallest safe change, and close the affected condition plus one unaffected condition. |
-| Standard module work | A bounded module enhancement or local interface linkage has a clear current basis | Work only from the current package, frozen inputs, and module acceptance boundary. |
-| Full design | Core objects, states, ownership, permissions, compatibility, shared contracts, or workflow consistency are affected | Pause broad implementation until the required business boundary is clarified. |
+At the start of a write-capable package or delegation, use [Active Task To Next Action](../SKILL.md#active-task-to-next-action) to establish the authorized goal, allowed behavior, exclusions, writable roots, owned files or asset classes, read-only reference roots, prohibited repositories or modules, pre-existing user changes, acceptance condition, and proportionate verification. Reuse an unchanged boundary; revisit affected facts when scope or ownership changes.
 
-Choose the lightest mode supported by verified risk. Deeper analysis is not authorization to write more code, modify more assets, or enlarge the current package.
+Treat each repository or project root as a separate ownership boundary. A workspace containing several roots is not wholly writable: only roots explicitly owned by the current task may change, while reference projects are read-only by default. Similar code, deeper analysis, and permission to inspect a project do not authorize edits, formatting, builds, generation, migration, or other write-capable commands there.
+
+Before every write-capable tool call, resolve its target and working directory and confirm they remain inside an allowed write root and owned asset class. A command authorized in one project is not authorized in a sibling project. When two or more roots are explicitly owned, work in each confirmed root and use each root's allowed verification without mechanically restricting the task to one directory or asking again for recorded ownership.
+
+## Conditional Reading
+
+Use matching sections, not the whole file or a sequence of stages. Reuse already consumed, unchanged guidance.
+
+| Condition | Read |
+| --- | --- |
+| Alignment depth or package basis is unclear | [Business Alignment Depth](#business-alignment-depth), [Current Change Package](#current-change-package) |
+| Context, active item, or delivery batch needs recovery | [Interruption Recovery And Delivery State](#interruption-recovery-and-delivery-state) |
+| User pauses for analysis | [Pause-For-Analysis Gate](#pause-for-analysis-gate) |
+| Delegating execution or investigating a boundary breach | [Write And Delegation Boundary](#write-and-delegation-boundary) |
+| Discovering possible additional work during implementation or review | [Review-Finding Gate](#review-finding-gate), [Discovery Classification And Adjacent Closure](#discovery-classification-and-adjacent-closure) |
+| A fix remains ineffective or verified facts invalidate the package | [Local Reopen](#local-reopen) |
+| Changing a multi-consumer asset | [Shared Consumer Check](#shared-consumer-check) |
+| Changing a field's display, validation, or submitted value | [Lightweight Value Path](#lightweight-value-path) |
+| Irreversible or other high-risk action | [Risky-Action Pause](#risky-action-pause) and source-arbitration authorization facts |
+
+## Business Alignment Depth
+
+Use the alignment levels in `../SKILL.md`, not a second process classifier. Touching a state, permission, shared contract, or several clients does not by itself require broader business design. Retain settled scope and continue safe independent work while an affected decision is clarified. For a local fix, verify the affected condition and one relevant unchanged condition. Deeper analysis does not authorize additional implementation or override a specialist's process.
 
 ## Current Change Package
 
-Before acting, establish the current package: authorized goal, allowed write roots, owned files or asset classes, read-only reference roots, prohibited repositories or modules, pre-existing user changes, allowed behavior, explicit exclusions, current implementation facts, acceptance condition, and the smallest meaningful verification. Check facts that code, configuration, records, interfaces, or documents can answer; when the evidence is unavailable, state the uncertainty and do not treat it as permission.
+Use the active-task anchor and established write boundary. Add applicable project agreements and prior accepted methods, current implementation facts, acceptance conditions, and the smallest meaningful verification. Check facts that code, configuration, records, interfaces, or documents can answer; when the evidence is unavailable, state the uncertainty and do not treat it as permission. Carry this basis into the next action and specialist handoff; do not regenerate it or a visible checklist for every turn. Reinspect only affected or uncertain parts.
 
 For a lightweight field or form change, determine whether it is display, validation, or submitted-value behavior. Include hidden retained values, saved old values, edit behavior, and the relevant persistence path only when they belong to that same condition.
 
@@ -34,7 +52,7 @@ A valid problem is not automatically current implementation work. Compilation, r
 
 ### Review-Finding Gate
 
-Classify a new functional, code, or security review finding before implementation: directly blocks current acceptance; directly related but non-blocking; belongs to another module or specialist batch; or requires a user decision. Only a direct current-acceptance blocker inside the task's ownership may automatically join implementation. Analysis depth, a failing test, or an easy fix does not authorize adding a finding to the current delivery.
+Review findings use the single classification and admission check in Discovery Classification And Adjacent Closure below. A direct current-acceptance blocker is a candidate for that check, not automatic permission to implement. Analysis depth, a failing test, or an easy fix does not authorize adding work. Keep acceptance priority separate from current-batch membership and ownership.
 
 ### Pause-For-Analysis Gate
 
@@ -43,10 +61,6 @@ When the user says to stop, analyze, or clarify first, stop new modifications, s
 In a workspace with many existing changes, do not begin staging or commit splitting before restoring the snapshot. Separate current blockers and their inseparable dependencies from completed later-batch work, local configuration and generated output, pre-existing user changes, and unverified or red-test code.
 
 ## Write And Delegation Boundary
-
-Treat each repository or project root as a separate ownership boundary. A workspace containing several roots is not wholly writable: only roots explicitly owned by the current task may change, while reference projects are read-only by default. Similar code, deeper analysis, and permission to inspect a project do not authorize edits, formatting, builds, generation, migration, or other write-capable commands there.
-
-Before every write-capable tool call, resolve its target and working directory and confirm they remain inside an allowed write root and owned asset class. A command authorized in one project is not authorized in a sibling project. When two or more roots are explicitly owned, work in each confirmed root and use each root's allowed verification without mechanically restricting the task to one directory or asking again for recorded ownership.
 
 For delegated execution, pass the exact writable roots, read-only roots, prohibited locations, owned assets, allowed verification commands, and existing user changes. The receiver must not enlarge that boundary because an adjacent repository has a more complete implementation. Its safe options are to read the reference, adapt the idea into an owned root, or report a blocking dependency.
 
@@ -60,14 +74,14 @@ If a write or write-capable command crosses the boundary:
 
 ## Discovery Classification And Adjacent Closure
 
-Classify every discovered item as one of:
+Classify each newly discovered item once, whether found during implementation or review:
 
-- A required adjacent closure.
-- A blocking conflict.
-- An out-of-scope discovery.
-- A later optimization.
+- Required adjacent closure: directly blocks current acceptance and passes all five admission conditions below.
+- Blocking conflict: a needed business decision, authoritative basis, or prerequisite remains unresolved.
+- Out-of-scope discovery: belongs to another module, owner, or delivery batch.
+- Later optimization: related but non-blocking work not already authorized for this batch.
 
-An item may join the current package as a required adjacent closure only when all five conditions hold:
+Only a proposed addition to the current package needs this admission check. Check all five conditions before admitting a directly blocking discovery; use the resulting classification rather than creating another review category or ledger:
 
 1. It is necessary for the current acceptance condition.
 2. It belongs to the same operation, interface contract, or data-submission chain.

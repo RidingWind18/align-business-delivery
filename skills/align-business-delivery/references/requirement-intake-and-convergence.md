@@ -9,9 +9,19 @@ Choose the start mode from the user's request and the available material.
 | Mode | Use when | Output |
 | --- | --- | --- |
 | Reviewable draft baseline | The user needs a complete PRD, product proposal, or prototype baseline from incomplete material | A normally readable, complete draft that makes uncertainty visible without presenting it as frozen fact |
-| Linear organize-only | The user asks to organize existing material, avoid expansion, or confirm items in sequence | A faithful, ordered consolidation; record gaps without filling them with new business rules |
+| Linear organize-only | The user asks to organize existing material, avoid expansion, or confirm items in sequence | The requested source content, faithfully organized; use Organize-Only Output below |
 
-Both modes begin with current behavior before target behavior when existing facts are available. In either mode, do not answer a checkable question with a guess: inspect available documents, code, schema, API, prototype, configuration, or runtime evidence first. State what was checked, the resulting fact, and what remains unverified.
+When describing a change to an existing system, begin with current behavior before target behavior. In either mode, do not answer a checkable question with a guess: inspect available documents, code, schema, API, prototype, configuration, or runtime evidence first. State what was checked, the resulting fact, and what remains unverified.
+
+## Organize-Only Output
+
+Deliver the requested source content, organized by the user's requested keys or sequence and attributed to its source. Preserve meaning, verbatim wording where requested, and distinctions between sources. Include a supplied explanation when the user requests it; leave absent information absent. When the user requests missing-item markers or source comparison, include those within that requested scope.
+
+Keep other gaps, conflict analysis, interpretations, and recommendations internal, rather than appending them to the artifact. Preserve disagreeing source statements separately with attribution. If missing or conflicting evidence prevents faithful delivery, briefly identify the specific limitation outside the artifact or ask only for the selection that blocks it; do not invent a resolution. The reviewable-draft mode remains available when the user requests a full initial proposal or PRD.
+
+## Preserve Relationships Before Summarizing
+
+For a tangled request with several objects, actors, or stages, reconstruct the supplied relationships before choosing a familiar workflow. Keep each affected object's current versus target state, action and purpose, stage, responsible actor or recipient, and dependencies where those distinctions matter. Reference experience remains attached to its source, not assumed true of the target. Check that the summary and proposed artifacts still express these relationships; shared topic names do not make distinct purposes, owners, or parallel tracks interchangeable. Keep this mapping internal. Expose only consequential ambiguity; carry later-stage unknowns forward without blocking independent current work.
 
 ## Readable Draft And Matter List
 
@@ -24,7 +34,7 @@ Keep the PRD, product proposal, or prototype body in normal readable structure. 
 - Pending confirmation: a decision, fact, or boundary that cannot yet be verified or frozen.
 - Out of scope: a discovered item that is not authorized for the current baseline or task.
 
-For normal output, express populated categories in one compact matter table or list and combine empty categories into a short note such as "no code facts or out-of-scope items were verified." Expand all six category headings only for a formal baseline audit, full evidence, handoff that needs category-by-category traceability, or an explicit user request. This presentation rule never permits merging one category's meaning into another.
+Keep classification internal by default. Show only categories useful to the requested proposal, review, handoff, or current decision; do not require a table, empty-category notes, or a fixed report format. Expand category-by-category evidence when the user requests it or consequential ambiguity requires it. Concise presentation never permits merging the categories' meanings.
 
 Use an inline label in the body only when an ambiguity is consequential: it could change business meaning, ownership, state, scope, acceptance, or a later design decision. Other uncertainty belongs in the matter list so the main document remains reviewable.
 
@@ -32,7 +42,7 @@ Use an inline label in the body only when an ambiguity is consequential: it coul
 
 Build the first useful baseline from available evidence without waiting for every detail. A complete draft baseline may describe goals, actors, main modules, primary flows, assumptions, and acceptance direction, provided unconfirmed content remains in its proper matter-list section.
 
-For linear organize-only work, preserve the supplied order and meaning. Separate confirmed material from gaps, but do not turn gaps into inferred rules or recommendations unless the user changes the mode.
+For linear organize-only work, use Organize-Only Output; analysis or drafting applies only when requested, without replacing unaffected source material.
 
 As facts are verified or decisions are made, promote only the affected item: a confirmed decision may replace a pending item, inference, or recommendation. Do not silently rewrite earlier material or treat a draft as the current effective implementation basis before source arbitration establishes that basis.
 
@@ -59,15 +69,21 @@ Execute only the current authorized request. A question, suggestion, or future p
 
 ### Follow-Up Inheritance
 
-For a supplement, short correction, quoted reply, or "continue," first locate the active parent request and its latest effective correction. Default to changing only the named item; keep the parent's goal, delivery batch, exclusions, and unaffected decisions. Start a new task only when the user explicitly switches the target or the existing parent cannot reasonably contain the request. If several active parents genuinely fit, ask only which one is meant.
+Apply [Active Task To Next Action](../SKILL.md#active-task-to-next-action) to supplements, short corrections, quoted replies, and "continue." Use this table to resolve the message's effect within that anchor:
 
-Classify the follow-up by effect: answer a question, correct a fact, add or replace a constraint, authorize an action, or change the task target. A question about a proposed implementation does not by itself authorize that implementation. A correction supersedes the conflicting conclusion, not the entire task. State the changed point and preserved boundary briefly when needed; do not make the user restate the whole assignment or reopen a settled design merely to continue.
+| Effect in the active task | Next action |
+| --- | --- |
+| Approval of the concrete action just presented | Satisfy that pending confirmation and perform the action, retaining other applicable gates; a prior temporary "not yet" no longer pauses that action |
+| Question alongside approved, unfinished work | Answer and continue that work in this turn; identify an actual blocker if continuation is impossible |
+| Correction or supplement | Replace the conflicting fact, constraint, or mechanism and its dependent choices; continue the affected task, preserving unrelated accepted work |
+| Explicit stop or analyze-only request | Stop writes and perform only the permitted analysis; resume only after the relevant authorization |
+| Explicit target switch | Establish the new parent; retain the former task's unfinished state |
 
-If the user corrects the same task interpretation twice, stop generating another plan or speculative cause list. Re-read the parent request, the two corrections, and the checkable current artifact or source; resolve the exact mismatch before further execution. Keep this recovery internal unless the remaining choice truly belongs to the user.
+Apply every relevant effect in a mixed message: approval followed by a question is both confirmation and a question, not question-only. A question alone creates no new authorization. Topic agreement does not approve an unpresented design or skip an outstanding specialist gate. When several parents genuinely fit, ask only which one is meant. Simplification reduces implementation or interaction burden, not confirmed results, compatibility, ownership, or acceptance. Before finalizing, distinguish the answer given from the pending action actually performed or blocked. Keep this routing internal, not a new checklist for the user.
 
 ### Current Feedback Batch
 
-Treat the user's latest turn, referenced passage, or explicitly named recent turns as feedback on the affected items of the active parent task. It does not replace the whole task or erase other active items unless the user says so. Prefer the business object identified by the quotation or annotation; do not pull unrelated historical issues into the batch.
+Treat the user's latest turn, referenced passage, or explicitly named recent turns as feedback on the affected items of the active parent task. It does not replace the whole task or erase other active items unless the user says so. Resolve the quoted object within that parent: a named example in a requested whole-package review retains the whole review scope; an explicitly local request stays local. Use [Requested Review Coverage](delivery-convergence-and-evidence.md#requested-review-coverage) for the former. Do not pull unrelated historical issues into the batch.
 
 First identify what each quotation or annotation is doing: it may name the current business object, define the current problem scope, mark a historical execution cutoff, dispute an old conclusion, supply evidence, or locate the parent request. Do not assume the quoted text is the whole current scope. Ordinary feedback about a current object should be handled directly; it does not require mechanically reopening the entire history.
 

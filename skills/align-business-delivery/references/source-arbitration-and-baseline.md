@@ -17,6 +17,10 @@ Do not make one source answer every question.
 
 Follow verified project convention ahead of generic preference. State conflicts by dimension, retain non-conflicting work, and request only the decision needed to establish the current effective basis. A confirmed future target does not put every related change into the current batch.
 
+Before choosing a mechanism, connect it to a confirmed requirement, applicable agreement, or inspected existing behavior. An assistant's earlier plan or claim of necessity is not evidence of a requirement. When the user rejects a mechanism, inspect what the original path already does and withdraw dependent additions whose only basis was that mechanism; retain independently required behavior and valid later changes. For restoration or a minimal delta against a named base, compare code structure as well as results; leave unrelated code unchanged.
+
+When a consequential claim is called "confirmed," trace its adoption and applicability, not just its latest citation. Several documents repeating or citing an assistant's proposal are not independent confirmation. A demo, rehearsal, or other-environment value stays in that context until adopted for the target; preserve unchanged target identifiers when only another dimension was authorized to change. Inspect the relevant origin or report the precise evidence gap before propagating the claim across artifacts.
+
 ## Checkable Facts
 
 When context, documents, code, schema, database records, configuration, prototypes, logs, APIs, or source history can answer a question, inspect them before offering causes or options. Internally retain:
@@ -30,9 +34,23 @@ Uncertain:
 
 Keep this record concise or internal during routine work. If evidence is unavailable, name the missing source instead of replacing inspection with “probably,” “maybe,” or a list of plausible causes. A prototype marker may establish a visible page rule, but it cannot by itself create a backend validation, state, ownership, or data rule.
 
+Match each conclusion to the object, source version, environment, and coverage actually inspected. For a different or broader target, inspect that target or keep the broader claim unverified. An empty search establishes only that the search found no match; check the path or matching method before treating it as absence.
+
 When repairing a migrated or copied feature, inspect the reachable source implementation and the target call path before inventing a new contract. Passing tests for a newly invented path does not prove that it matches the existing source contract.
 
-For a review concern based on an unusual sequence or concurrency, trace the supported actor, page or API entry, necessary state, and existing guard before asking for a new business rule. Distinguish a normal operation from a technically constructible request; the latter may justify checking defensive code, but does not itself justify redesign or a user decision. If the sequence is not supported by the actual workflow, or existing protection already contains its effect, close the concern briefly. Escalate only a reachable, unhandled consequence that affects the authorized acceptance condition; ask the user only when resolving it requires a genuine business choice.
+Before excluding a cause, check whether the evidence exercises the disputed step in the applicable version. A prepared object or downstream-only test cannot establish the correctness of the acquisition, query projection, mapping, or state transition it bypasses. When observed data contradicts the expected flow, inspect that affected boundary before sending the user to broader historical investigation. Keep technical diagnosis with the appropriate specialist; this is an evidence-coverage check, not a mandatory full-system trace.
+
+For an unusual sequence or concurrency concern, trace roles, page and API entries, required states, real callers, and existing guards. Business prohibition, absence of a normal UI path, and an enforced server guard are different evidence. Exclude unsupported product assumptions without creating a new business decision from a technically constructible request. Close the defect concern only when evidence shows no actionable consequence or effective protection contains it. If an actually callable interface has a reproducible authorization or consistency defect, report it even without a normal UI path; keep protection within the authorized invariant and ownership rather than redesigning the product. Ask the user only when resolution needs a genuine business choice; findings outside the current batch follow the review-finding gate in `execution-scope-guard.md`.
+
+## Previously Verified Methods
+
+For a repeated operation, proactively find the relevant project agreement, actual prior artifact, and validation basis; the user need not name them again. Search the task's entry/index, related procedure or module, and relevant history as needed, not all project history. Check whether the goal, environment, structure, and critical preconditions still apply. If so, reuse the method, table or component boundary, operating sequence, artifact destination, and acceptance approach; adapt only target parameters and demonstrated scenario differences. Reuse is not evidence that new target data was checked or that execution is authorized. Revalidate changed preconditions and target facts without making the user re-prove unchanged logic. If the prior basis is inaccessible or materially conflicts, identify that specific gap rather than presenting a replacement as the established method.
+
+Finding another table, an optional safeguard, or a candidate improvement does not itself invalidate the method or authorize adding it. When it is genuinely inapplicable, identify the concrete difference and adjust only that part; preserve valid work. Compare the complete increment with the adopted basis before delivery or after a scope correction, not just the statement that last failed. Keep the operational handoff usable in the receiver's actual working conditions.
+
+Judge simplification by clear business responsibilities and lower operator effort, not statement, method, or file counts. Preserve each operation's own preconditions; share them only when genuinely common. Consistency does not require forcing distinct operations into one statement or abstraction, nor does separation alone prove a safer result.
+
+When replacing a manual operation with a feature, preserve its confirmed observable outcome while adapting authorization, transactions, and failure handling through existing project mechanisms. A reusable business result does not require copying manual SQL literally or inventing a new permission scheme, abstraction, or page.
 
 ## Baseline Record
 

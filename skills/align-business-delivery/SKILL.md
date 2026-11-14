@@ -5,7 +5,7 @@ description: Use when an existing or complex business-system task needs a review
 
 # Align Business Delivery
 
-Use the lightest safe process to turn incomplete business input and current-system facts into a traceable, executable, and verifiable delivery baseline. Keep requirements, product flow, business contracts, implementation, and validation aligned without requiring the user to write a large process prompt.
+Align incomplete business input with current-system facts into a traceable, executable, verifiable baseline. Carry requirements, product flow, contracts, and accepted ways of working through implementation and corrections without making the user repeatedly explain them.
 
 This skill is for existing business systems and complex business features. It is not a replacement for generic planning, implementation, TDD, debugging, testing, code review, worker scheduling, branch management, or project management.
 
@@ -19,52 +19,49 @@ The user's explicit task and latest corrections take precedence over this skill'
 - A draft PRD, prototype, generated document, or external capability output is not automatically the current business baseline; it must be consumed, calibrated, or confirmed.
 - Analysis depth follows business risk. A deeper review does not expand the authorized implementation scope.
 - Read access, deeper inspection, and similarity to another project do not grant write access. Establish the writable roots and protected user changes before editing or delegating execution.
-- Preserve project conventions and verified standard modules over generic preference.
-- Ask only questions that block the current decision. Continue safe, non-blocking work internally.
+- Proactively find applicable project agreements, accepted artifacts, and verified procedures. Apply them as execution constraints, preserving unchanged parts rather than silently substituting a preferred method.
+- Ask only for missing decisions that block the current work. A specialist's required understanding or design confirmation is not a redundant question; use known facts instead of re-interviewing the user.
 - In review, check the supported actor and entry, necessary state, and existing protection before escalating an unusual scenario. A technically constructible request alone is not a new business decision.
-- Separate the current execution request from conceptual questions, candidate ideas, pending decisions, later-stage work, and explicit exclusions. Discussion is not implementation authorization.
-- Apply follow-up feedback to the affected items of the active parent task. Preserve unchanged goals, exclusions, confirmed decisions, and other active items unless the user switches tasks. Do not reopen resolved or superseded items without new regression evidence.
 - Keep routine output concise: current conclusion, blocking decision, next action, evidence, and residual risk.
 
-## Choose The Lightest Mode
+## Active Task To Next Action
 
-**Fast closure** applies to local copy, style, visibility, validation, mapping, or one-point fixes that do not change business state or shared contracts. Check the full value path that matters, then implement and verify without producing a full PRD or module map. Fast closure removes extra business-alignment artifacts; it does not waive a professional method that the user, host, or that capability's own trigger requires.
+Anchor the next action in the requested result, effective basis, and latest applicable correction. Identify what the latest message changes, retain unaffected confirmed decisions, accepted behavior, exclusions, and valid later additions, then take the next authorized unfinished action. Resolve its effect within the active parent task rather than treating each supplement as a new assignment.
 
-**Standard module work** applies to a bounded module enhancement, an existing-page change, or local client/server linkage with clear ownership and contracts.
+Separate execution requests from conceptual questions, candidate ideas, pending decisions, later work, and exclusions. Discussion alone is not implementation authorization; questions neither authorize new work nor cancel existing authorization. Respect explicit pauses, task switches, real blockers, and specialist gates; keep closed items closed without new evidence. If blocked, identify the precise missing decision or evidence and continue independent authorized work.
 
-**Full design** applies to a new system or large module, core object or state changes, workflow refactoring, multi-client or multi-repository contracts, unresolved ownership, or several dependent modules.
+Keep this anchor internal, reuse the established task record, and recover only missing or changed facts. It is not a sequence of approval stages, a new document, or a per-turn checklist for the user.
 
-Escalate only when discovered facts increase business risk. De-escalate when inspection proves the change is local and existing patterns cover it.
+If the user corrects the same task interpretation twice, stop generating another plan or speculative cause list. Re-read the parent request, the two corrections, and the checkable current artifact or source; resolve the exact mismatch before further execution. Keep this recovery internal unless the remaining choice truly belongs to the user.
 
-## Entry And Return Routing
+## Scale Business Alignment
 
-This is a fact-based router, not a stage plan or a visible checklist. Do not output every route merely because the skill triggered, and do not require work to pass through them in order. Skip any route already supported by current, consumed evidence.
+These levels size business-alignment work, not a competing design or approval workflow. A selected specialist owns its process, approval gates, and escalation; do not classify or downgrade that process again here. Choose alignment depth from unresolved business decisions, actual impact, and verified risk.
 
-- **Vague input**: capture the requested start mode. For organize-only, initial business draft, or reviewable PRD-baseline requests, form one complete reviewable business baseline here without requiring specialist exploration. For explicit option exploration, comparison, formal product design, or prototyping, freeze the verified inputs and hand the formal artifact to the appropriate specialist capability; do not create a parallel formal artifact.
-- **Existing baseline**: inspect current documents, code, database, prototypes, history, and conventions; arbitrate only the dimensions that conflict.
-- **Documentation baseline diagnosis**: when the user asks what documentation to maintain, or missing or stale documentation prevents a reliable baseline, inspect the project and recommend the minimum role-based document topology; create or repair it only when authorized.
-- **Affected module refinement**: refine only the current module or affected page, data flow, state behavior, and prototype investment.
-- **Development-batch freeze**: record the effective scope, contracts, dependencies, ownership, acceptance, and unresolved blockers, then hand planning or implementation to the appropriate specialist capability.
-- **Execution drift return**: re-enter only when feedback, interruption, source conflict, ownership conflict, dependency invalidation, or scope discovery changes the frozen package. Return only the affected module to its earliest unresolved route.
-- **Delivery convergence**: compare delivered behavior with the effective business goal, evidence, and actual completion level.
-- **Fast closure**: for a verified local change, inspect the affected value path, implement, and validate without creating a full baseline, lifecycle, or task ledger.
+**Fast closure** applies to a verified local fix with a settled business boundary, including a small state or API-linked correction. Check the affected value path and evidence without a full PRD or module map.
 
-Lightweight means low-interference routing and concise output, not shallow business analysis.
+**Standard module work** applies to a bounded enhancement or client/server linkage with sufficiently clear rules, contracts, and ownership.
+
+**Full design** applies when unresolved consequential decisions or demonstrated impact require forming or changing the business boundary. Clarify only the affected objects, rules, flows, or ownership; settled parts need not restart design.
+
+Increase alignment work only for verified unresolved decisions; stop adding alignment artifacts when existing rules cover the change. Lightweight means low interference, not shallow analysis, skipped approvals, or weaker acceptance.
 
 ## Mandatory Gates
 
-At the start of a write-capable task package or delegation, read `references/execution-scope-guard.md` and establish the allowed write roots, owned asset classes, read-only references, prohibited repositories or modules, and pre-existing user changes. Revisit the boundary when scope or ownership changes; check each write target against the established boundary. Multiple projects in one workspace are not one writable scope.
+At the start of a write-capable task package or delegation, read [Required Write Boundary](references/execution-scope-guard.md#required-write-boundary) and its conditional reading index. Read further sections only for matching conditions; the write-boundary gate does not require loading the whole reference. Reuse an established unchanged boundary and revisit affected facts when scope or ownership changes.
 
-Before producing or applying an irreversible or difficult-to-recover action, read `references/source-arbitration-and-baseline.md` to verify the exact goal, object, environment, mechanism, and destructive details. Then read `references/execution-scope-guard.md` for the pause/continue decision. If authorization is incomplete, do not place the unconfirmed object or action in an executable or optional cleanup artifact; a disabled-by-default switch, comment, preview, guard, or "optional" label does not supply authorization. Pause only the risky part and continue safe current-scope delivery. If authorization is complete and current facts agree, proceed without asking for the same confirmation again.
+Before producing or applying an irreversible or difficult-to-recover action, read [Irreversible Authorization Facts](references/source-arbitration-and-baseline.md#irreversible-authorization-facts) and [Risky-Action Pause](references/execution-scope-guard.md#risky-action-pause). Incomplete authorization cannot be bypassed with an optional executable artifact. Pause only the risky part; proceed without renewed approval when recorded authorization and current facts agree.
+
+Before an execution handoff across independent workspaces, repositories, or external prototype baselines, read `references/module-delivery-and-coordination.md` and verify that the receiver can consume the key authoritative inputs.
 
 Before starting a dependent module when task status, code, commits, validation, or acceptance disagree, read `references/module-delivery-and-coordination.md`. Do not choose the most optimistic source, mark the task `DONE`, or create downstream business files while the conflict remains. When authoritative evidence agrees and the gate is formally released, advance and enter the authorized downstream scope without repeated confirmation.
 
 ## Reference Routing
 
-Use this list as the single ordinary reference router. Read only the target references required by the current facts and risk. Reuse a reference already consumed in the current session while its governing basis and risk remain unchanged; do not reload it solely because another route mentions it.
+Use this single router as needed, not as sequential stages or a visible checklist. Skip resolved routes; return only affected work to its earliest unresolved decision. Locate the relevant heading and read its section with necessary context, rather than an arbitrary file prefix. Keep long project extracts separate from guidance; recover relevant omitted text when output is truncated. Reuse consumed, unchanged evidence and guidance rather than mechanically reading it again.
 
 - `references/requirement-intake-and-convergence.md`: vague requirements, complete draft baseline, organize-only or stepwise intake, mixed intent, current feedback batches, quoted or annotated history, parent-request recovery, interruption recovery, or fact/inference/recommendation separation.
-- `references/source-arbitration-and-baseline.md`: checkable facts, conflict among user decisions, PRDs, prototypes, code, database, history, conventions, current batch, or irreversible-action authorization.
+- `references/source-arbitration-and-baseline.md`: checkable facts, reuse of a previously verified method, source conflicts, current batch, or irreversible-action authorization.
 - `references/prototype-and-product-flow.md`: prototype investment, real-page and component reuse, page interaction, data flow, state expression, or prototype-to-implementation tracking.
 - `references/document-and-artifact-lifecycle.md`: document consumption, project-class governance, current versus historical material, consumers, version ownership, or initialization/migration/verification/deployment asset boundaries.
 - `references/documentation-baseline-diagnosis.md`: missing, stale, duplicated, contradictory, or unclear project documentation; documentation-system recommendation; authority index; minimum useful document topology; or authorized baseline creation and repair.
@@ -76,15 +73,14 @@ Use this list as the single ordinary reference router. Read only the target refe
 ## Capability Handoff
 
 - This skill owns verified business facts, the effective baseline, authorized scope, decisions the receiver must not make, the expected artifact, and the return point.
-- This skill may produce a complete reviewable business baseline for organize-only, initial-draft, or PRD-baseline requests. Specialist capabilities own option exploration and comparison, formal product design or prototyping, technical planning, implementation, debugging, testing, review, and their execution methods.
+- For organize-only, use [Organize-Only Output](references/requirement-intake-and-convergence.md#organize-only-output). When the user requests an initial business draft or complete reviewable PRD baseline, produce that full draft, distinguishing confirmed facts from assumptions and pending decisions. Specialist capabilities own option exploration and comparison, formal product design or prototyping, technical planning, implementation, debugging, testing, review, and their methods.
 - This skill decides only whether it actively initiates a specialist handoff. Mere installation or availability is not a reason for this skill to initiate one. Organize-only intake, fact classification, source arbitration, feedback convergence, interruption recovery, and fast closure do not by themselves require an Align-initiated handoff.
-- When the current authorized request requires a specialist-owned artifact or method, initiate the handoff. When the user names or supplies a specialist, the host requires it, or the specialist has triggered under its own rules, cooperate with that workflow and pass the business context below; do not suppress, replace, or reinterpret that trigger because ordinary engineering or fast closure appears sufficient.
-- When handoff is required, do not silently substitute this skill's own design, plan, prototype, implementation method, or review. Hand verified inputs to the specialist once. When its artifact returns, calibrate only conflicts, scope, ownership, evidence, and validity before admitting it to the effective baseline; do not generate a second artifact of the same kind.
+- When the current authorized request requires a specialist-owned artifact or method, initiate the handoff. When the user names or supplies a specialist, the host requires it, or the specialist has triggered under its own rules, cooperate and pass the verified business context; do not suppress, replace, or reinterpret that trigger because ordinary engineering or fast closure appears sufficient.
+- Hand verified inputs, ownership/dependencies, non-decisions, the expected artifact, and return point to the specialist once. Approval of the goal does not approve a later scope-changing design. Follow existing patterns for internal technical choices; surface a consequential departure and its evidence, not a menu of internal classes for the user to design. On return, calibrate conflicts, scope, ownership, dependencies, evidence, and validity before admitting the artifact to the effective baseline; do not substitute or generate a second artifact of the same kind.
 - While specialist work remains within the frozen package, stay low-interference. Re-enter only for a changed business basis, scope or ownership conflict, dependency invalidation, interruption recovery, or a completion claim unsupported by evidence.
 - If no specialist capability exists, use ordinary engineering practice. Missing specialist capability is not itself a blocker; continue at the abstraction requested from confirmed facts and request detail only when the next concrete action requires it.
-- External output does not become the effective business baseline until it is consumed, calibrated, or confirmed.
 - Do not require or name a particular model, IDE, plugin, agent system, or skill in the formal workflow.
 
 ## Completion
 
-At a formal handoff, large-batch end, complex or cross-repository delivery claim, evidence conflict, or requested omission/scope review, read `references/delivery-convergence-and-evidence.md`. For a simple fast-closure claim, directly compare the request, actual change, exclusions, and evidence; load that reference only if the comparison exposes uncertainty or broader risk.
+At a formal handoff, large-batch end, complex or cross-repository delivery claim, evidence conflict, or requested omission/scope review, read the relevant section of `references/delivery-convergence-and-evidence.md`. For an explicitly requested whole-package review, use [Requested Review Coverage](references/delivery-convergence-and-evidence.md#requested-review-coverage). For a simple fast-closure claim, directly compare the request, actual change, exclusions, and evidence; load that reference only if the comparison exposes uncertainty or broader risk.

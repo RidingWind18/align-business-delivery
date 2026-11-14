@@ -27,22 +27,26 @@ State the actual capability boundary:
 - Not supported or intentionally deferred.
 - Residual risk and its owner, decision, or next-stage coverage.
 
+## Requested Review Coverage
+
+For an explicitly requested whole-package review, pass the current change set, applicable project or reference standards, and accepted corrections to the reviewer. Recover the set from the active task and current diff or artifacts; the user's named example is a starting point, not a smaller replacement scope. Inspection methods remain with the specialist.
+
+Compare the returned review's actual coverage and findings with that set, including applicable peers when a finding reveals a repeated issue. The result states supported findings and remaining coverage gaps; a selected object's compliance does not establish the whole package's compliance. Keep unreviewed parts unfinished instead of waiting for the user to name each one. This is not a new report format, whole-repository audit, per-turn check, or authorization to fix findings. An explicitly local review retains its local boundary.
+
 ## Evidence Levels
 
-Report the highest level supported by fresh evidence:
+For each material delivery conclusion, state what was verified, by which method, against which artifact or version and environment, and what remains unverified. Evidence may come from static code or document inspection, automated unit or integration checks, generated-artifact inspection, local browser or client execution, local service integration, simulated-environment checks, or real target-environment acceptance. These cover different claims; the strongest available result does not establish the whole delivery.
 
-1. Static code or document check.
-2. Automated unit or integration check.
-3. Generated-artifact check.
-4. Local browser or client check.
-5. Local service integration.
-6. Simulated-environment verification.
-7. Real target-environment acceptance.
+A unit test or static inspection does not establish page runtime acceptance; local or simulated checks do not establish target-environment acceptance. Report the checks performed, results, coverage gaps, and residual risk. Scale evidence to the declared delivery risk, without forcing every method, a fixed table, or a full-stack checklist for each task. Do not claim success without fresh evidence for that conclusion's boundary.
 
-Lower-level evidence must never be described as higher-level acceptance. Report the checks performed, their results, missing higher-level evidence, and residual risk. Scale the evidence to the delivery risk, but do not claim success without fresh evidence for the declared boundary.
+Check what the evidence actually covers, not just how many checks passed. Apply `source-arbitration-and-baseline.md` when a test bypasses the disputed business step, and `document-and-artifact-lifecycle.md` when a handoff's operational usability is in question.
+
+Bind the claim to the artifact actually delivered: its final contents, entry or invocation, applicable environment, and destination. A temporary copy, earlier revision, or different branch establishes only that version's result; reconcile differences before claiming the delivered version passed. After changing a previously checked artifact, repeat the affected check or disclose the unverified delta. Verification methods remain with the specialist; this does not require a checksum, new report, or user-run checklist for every change.
 
 ## Truthful Completion
 
 A delivery conclusion states what changed, the affected modules or assets, the business behavior delivered, the evidence level, unresolved items, and residual risk. Distinguish a completed technical batch, a delivered stage, and a completed whole capability. When evidence is partial, say exactly what is complete and retain the remaining boundary as incomplete rather than using a broad completion label.
+
+Describe changes against the relevant pre-change baseline: distinguish added behavior, a corrected pre-existing defect, and reversal of a defect introduced in this batch. Do not present unchanged behavior or an unverified historical incident as a delivered fix. Keep release and deployment status separate from the code change.
 
 For interrupted or mixed batches, keep implementation state, business blocking priority, and current delivery membership separate. "Coded," "automated checks passed," "runtime verified," "accepted by the user," and "eligible for this commit" are not interchangeable completion claims.
